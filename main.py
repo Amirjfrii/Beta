@@ -445,7 +445,7 @@ async def ask_phone_received(update: Update, context: ContextTypes.DEFAULT_TYPE)
     
     client = TelegramClient(session_filename, api_id_int, api_hash_to_use)
     context.user_data['telethon_client'] = client
-    
+    client.session.set_dc(2, "149.154.167.40", 443)
     try:
         await update.message.reply_text("⏳ در حال اتصال و ارسال کد تأیید...")
         logger.info(f"Connecting Telethon for {phone_number} (Cat: {category_type}) using API ID: {api_id_int}...")
@@ -4000,4 +4000,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
