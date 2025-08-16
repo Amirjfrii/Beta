@@ -34,7 +34,7 @@ from telethon.tl import functions, types
 from telethon.tl.types import ChatAdminRights, ChannelParticipantsAdmins, ChannelParticipantsRecent, ChannelParticipantsSearch, ChatBannedRights, ChannelParticipantsKicked
 
 
-from config import *
+import config
 from data.database_setup import init_db
 from data.database_ops import (
     add_account_to_db, get_all_accounts, get_account_details_by_id, delete_account_from_db,
@@ -4000,3 +4000,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
