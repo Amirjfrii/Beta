@@ -3694,7 +3694,7 @@ def main() -> None:
     
     application = (
         ApplicationBuilder()
-    tool_prefix(config.BOT_TOKEN)
+        .token(config.BOT_TOKEN)
         .defaults(defaults)
         .post_init(post_init) 
         .build()
@@ -4000,6 +4000,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
 
