@@ -3691,10 +3691,10 @@ def get_selected_accounts(context: ContextTypes.DEFAULT_TYPE, tool_prefix: str) 
 def main() -> None: 
     init_db(); logger.info("دیتابیس با موفقیت بررسی/ایجاد شد.")
     defaults = Defaults(parse_mode=ParseMode.HTML)
-    BOT_TOKEN = input("enter token: ")
+    
     application = (
         ApplicationBuilder()
-        .token(BOT_TOKEN)
+    tool_prefix(config.BOT_TOKEN)
         .defaults(defaults)
         .post_init(post_init) 
         .build()
@@ -4000,6 +4000,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
 
